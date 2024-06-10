@@ -5,6 +5,10 @@ All notable changes to this project will be documented in this file. This projec
 
 ## [Unreleased]
 
+## [5.0.1] - 2024-06-10
+### Fix
+Fix undefined index + save guest cart when login
+
 ## [5.0.0] - 2024-03-15
 ### Added
 Opencart 4 Support

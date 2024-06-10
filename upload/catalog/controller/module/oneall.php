@@ -698,6 +698,28 @@ class Oneall extends \Opencart\System\Engine\Controller
     // Display Widget
     private function display_widget($data)
     {
+        if (!$this->customer->isLogged())
+        {
+            $option = [
+                'expires'  => time() + 60 * 60 * 24 * 30,
+                'path'     => '/',
+                'SameSite' => 'Lax'
+            ];
+            
+            setcookie('oax', $this->session->getId(), $option);
+        } else {
+            
+            // Update cart for guest session
+            if (isset($_COOKIE['oax'])){
+                $cartSessionID = $_COOKIE['oax'];
+                $this->db->query("UPDATE `" . DB_PREFIX . "cart` SET customer_id='".$this->db->escape($this->customer->getID())."' WHERE session_id='" . $this->db->escape($cartSessionID) . "'");
+                setcookie('oax', '', []);
+                
+                $this->response->redirect($this->url->link('account/account', 'language=' . $this->config->get('config_language') . (isset($this->session->data['customer_token']) ? '&customer_token=' . $this->session->data['customer_token'] : ''), true));
+            }
+        }
+        
+        
         return $this->load->view('extension/oneall_social_login/module/oneall_widget', $data);
     }
 
@@ -929,12 +951,6 @@ class Oneall extends \Opencart\System\Engine\Controller
                                 {
                                     $redirect_to = 'account/account';
                                 }
-
-                                // Save data session
-                                $this->session->data['customer'] = $user_data;
-
-                                // Create customer token
-                                $this->session->data['customer_token'] = oc_token(26);
 
                                 // Redirect
                                 $this->response->redirect($this->url->link($redirect_to, 'language=' . $this->config->get('config_language') . (isset($this->session->data['customer_token']) ? '&customer_token=' . $this->session->data['customer_token'] : ''), true));
@@ -1331,7 +1347,7 @@ class Oneall extends \Opencart\System\Engine\Controller
     private function get_user_agent()
     {
         // System Versions
-        $social_login = 'SocialLogin/5.0.0';
+        $social_login = 'SocialLogin/5.0.1';
         $opencart = 'OpenCart' . (defined('VERSION') ? ('/' . substr(VERSION, 0, 3)) : '3.x.x');
 
         // Build User Agent
