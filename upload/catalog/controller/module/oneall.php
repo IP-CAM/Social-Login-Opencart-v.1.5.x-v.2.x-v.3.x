@@ -995,6 +995,7 @@ class Oneall extends \Opencart\System\Engine\Controller
 
         // Customer Data
         $customer_data = array(
+            'custom_field' => '',
             'customer_group_id' => $this->config->get('config_customer_group_id'),
             'firstname' => $data['user_first_name'],
             'lastname' => $data['user_last_name'],
@@ -1012,6 +1013,7 @@ class Oneall extends \Opencart\System\Engine\Controller
 
         // Add Customer
         $customer_id = $this->model_account_customer->addCustomer($customer_data);
+        $customer_data['customer_id'] = $customer_id;
 
         // Save data session
         $this->session->data['customer'] = $customer_data;
@@ -1086,6 +1088,8 @@ class Oneall extends \Opencart\System\Engine\Controller
                     }
                 }
                 $customer_data = array(
+                    'customer_id' => '',
+                    'custom_field' => '',
                     'customer_group_id' => '',
                     'firstname' => '',
                     'lastname' => '',
@@ -1347,7 +1351,7 @@ class Oneall extends \Opencart\System\Engine\Controller
     private function get_user_agent()
     {
         // System Versions
-        $social_login = 'SocialLogin/5.0.1';
+        $social_login = 'SocialLogin/5.0.2';
         $opencart = 'OpenCart' . (defined('VERSION') ? ('/' . substr(VERSION, 0, 3)) : '3.x.x');
 
         // Build User Agent
