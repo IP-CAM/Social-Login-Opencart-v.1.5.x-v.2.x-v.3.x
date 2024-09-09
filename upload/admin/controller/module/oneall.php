@@ -468,7 +468,7 @@ class OneAll extends \Opencart\System\Engine\Controller
             'tiktok' => 'TikTok',
             'tumblr' => 'Tumblr',
             'twitch' => 'Twitch.tv',
-            'twitter' => 'Twitter',
+            'twitter' => 'X',
             'vimeo' => 'Vimeo',
             'vkontakte' => 'VKontakte',
             'weibo' => 'Weibo',
