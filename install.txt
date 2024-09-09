@@ -1,8 +1,8 @@
-OneAll Social Login for OpenCart 3.x.x
+OneAll Social Login for OpenCart 4.x.x
 ---------------------------------------------
 Social Login allows your customers to connect with one click to OpenCart by
 using their social network accounts. Over 30 different social networks such
-as Facebook, Twitter, LinkedIn, Google, Yahoo, GitHub, Windows Live supported.
+as Facebook, TikTok, Twitter / X, LinkedIn, Google, Yahoo, GitHub, Windows Live supported.
 
 Social Login increases the conversion rate of your shop by simplifying the 
 registration process. Get rid of long forms and complicated captchas by 

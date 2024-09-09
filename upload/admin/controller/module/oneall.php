@@ -213,7 +213,7 @@ class OneAll extends \Opencart\System\Engine\Controller
         // Social Networks
         if (!isset($data['module_oneall_socials']))
         {
-            $data['module_oneall_socials'] = 'facebook,google,twitter';
+            $data['module_oneall_socials'] = 'facebook,google,twitter,tiktok';
         }
         
         // Social Login Status
@@ -465,6 +465,7 @@ class OneAll extends \Opencart\System\Engine\Controller
             'stackexchange' => 'StackExchange',
             'steam' => 'Steam',
             'strava' => 'Strava',
+            'tiktok' => 'TikTok',
             'tumblr' => 'Tumblr',
             'twitch' => 'Twitch.tv',
             'twitter' => 'Twitter',
@@ -950,8 +951,8 @@ class OneAll extends \Opencart\System\Engine\Controller
     private function get_user_agent()
     {
         // System Versions
-        $social_login = 'SocialLogin/5.0.2';
-        $opencart = 'OpenCart' . (defined('VERSION') ? ('/' . substr(VERSION, 0, 3)) : '3.x.x');
+        $social_login = 'SocialLogin/5.1.0';
+        $opencart = 'OpenCart' . (defined('VERSION') ? ('/' . substr(VERSION, 0, 3)) : '4.x.x');
         
         // Build User Agent
         

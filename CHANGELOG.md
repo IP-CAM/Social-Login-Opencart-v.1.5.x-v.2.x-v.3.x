@@ -5,6 +5,11 @@ All notable changes to this project will be documented in this file. This projec
 
 ## [Unreleased]
 
+## [5.1.0] - 2024-09-09
+### Added
+- TikTok added
+- X added
+
 ## [5.0.2] - 2024-06-17
 ### Fix
 Missing data fields

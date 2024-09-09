@@ -6,7 +6,7 @@
 * **Social Login for OpenCart 4.0+**
 
 
-# Social Login 5.0.2 for OpenCart 4.x
+# Social Login 5.1.0 for OpenCart 4.x
 
 Social Login for OpenCart allows your users to login and register with 40+ social networks. 
 It increases your OpenCart user registration rate by simplifying the registration process for 
@@ -51,9 +51,10 @@ new users and provides permission-based social data retrieved from the social ne
 * StackExchange
 * Steam
 * Strava
+* TikTok
 * Tumblr
 * Twitch.tv
-* Twitter
+* Twitter / X
 * Vimeo
 * VKontakte
 * Weibo

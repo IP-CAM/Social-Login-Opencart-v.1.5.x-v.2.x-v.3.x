@@ -1351,8 +1351,8 @@ class Oneall extends \Opencart\System\Engine\Controller
     private function get_user_agent()
     {
         // System Versions
-        $social_login = 'SocialLogin/5.0.2';
-        $opencart = 'OpenCart' . (defined('VERSION') ? ('/' . substr(VERSION, 0, 3)) : '3.x.x');
+        $social_login = 'SocialLogin/5.1.0';
+        $opencart = 'OpenCart' . (defined('VERSION') ? ('/' . substr(VERSION, 0, 3)) : '4.x.x');
 
         // Build User Agent
 
