@@ -459,6 +459,7 @@ class ControllerExtensionModuleOneall extends Controller
             'stackexchange' => 'StackExchange',
             'steam' => 'Steam',
             'strava' => 'Strava',
+            'tiktok' => 'TikTok',
             'tumblr' => 'Tumblr',
             'twitch' => 'Twitch.tv',
             'twitter' => 'Twitter',
@@ -944,7 +945,7 @@ class ControllerExtensionModuleOneall extends Controller
     private function get_user_agent()
     {
         // System Versions
-        $social_login = 'SocialLogin/4.7.0';
+        $social_login = 'SocialLogin/4.8.0';
         $opencart = 'OpenCart' . (defined('VERSION') ? ('/' . substr(VERSION, 0, 3)) : '3.x.x');
 
         // Build User Agent

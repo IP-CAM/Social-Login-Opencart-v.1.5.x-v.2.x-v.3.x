@@ -5,6 +5,10 @@ All notable changes to this project will be documented in this file. This projec
 
 ## [Unreleased]
 
+## [4.8.0] - 2025-01-07
+### Added
+- TikTok added
+
 ## [4.7.0] - 2022-01-24
 ### Added
 - Epic Games added
